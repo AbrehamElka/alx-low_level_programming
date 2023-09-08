@@ -3,10 +3,11 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
-/*
- * It will check a number is positive or negative
+/**
+ * it will check if n is positive, negative or zero
  */
+/* betty style doc for function main goes there */
+
 int main(void)
 {
 	int n;
