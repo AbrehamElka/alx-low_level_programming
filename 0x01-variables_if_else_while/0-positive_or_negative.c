@@ -4,6 +4,9 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/*
+ * It will check a number is positive or negative
+ */
 int main(void)
 {
 	int n;
