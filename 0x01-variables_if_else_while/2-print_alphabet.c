@@ -1,17 +1,17 @@
 #include <stdio.h>
 /**
- * main - It will out put the alphabet in lower case.
- * 
+ * main - prints the alphabet in lowercase.
+ *
  * Return: 0 on success
  */
 int main(void)
 {
-	char A = 'a';
+	char c = 'a';
 
-	while (A <= 'z')
+	while (c <= 'z')
 	{
-		putchar(A);
-		A++;
+		putchar(c);
+		c++;
 	}
 	putchar('\n');
 	return (0);
