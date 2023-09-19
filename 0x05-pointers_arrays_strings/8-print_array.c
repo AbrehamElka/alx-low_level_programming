@@ -4,13 +4,13 @@
 /**
  * print_array - prints arrays elements
  * @a: pointer to array
- * n: num of arrayes to be printed
+ * @n: num of arrayes to be printed
  */
 void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; i <= n; i++)
+	for (i = 0; i <= n + 1; i++)
 	{
 		if (i == 0)
 			printf("%d", a[i]);
