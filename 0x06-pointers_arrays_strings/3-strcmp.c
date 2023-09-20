@@ -8,5 +8,7 @@
  */
 int strcmp(char *s1, char *s2)
 {
-	return 0;
+	s1[0] = 'f';
+	s2[0] = 'w';
+	return (0);
 }
