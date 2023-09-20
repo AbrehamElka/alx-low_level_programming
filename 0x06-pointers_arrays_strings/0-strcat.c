@@ -8,33 +8,36 @@
  */
 char *_strcat(char *dest, char src *src)
 {
-	int len, j, i, tot, m;
+	int lenD, lens, lenT, i, m;
 
-	len = 0;
 
-	while (dest[len] != '\0')
+	lenD = 0;
+	lens = 0;
+
+	while (*(dest + lenD) != '\0')
 	{
-		len++;
+		lenD;
 	}
 
-	j = 0;
-	while (src[j] != '\0')
+	while (*(src + lenS) != '\0')
 	{
-		j++;
+		lenS;
 	}
 	
+	
+	lenT = lenD + lenS - 1;
 	m = 0;
+
 	i = 0;
-	tot = j + len - 1;
-	while (i < tot)
+	while (i < lenT)
 	{
-		if (i < len)
+		if (i < lenD)
 		{
-			dest[i] = dest[i];
+			*(dest + i) = *(dest + i);
 		}
 		else
 		{
-			dest[i] = src[m];
+			*(dest + i) = *(src + m);
 			m++;
 		}
 
