@@ -43,5 +43,7 @@ char *_strcat(char *dest, char src *src)
 
 		i++;
 	}
+
+	*(dest + lenT) = '\0';
 	return (dest);
 }
