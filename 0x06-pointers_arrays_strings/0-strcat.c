@@ -30,11 +30,11 @@ char *_strcat(char *dest, char src *src)
 
 	while (lenD < lenT)
 	{
-		*(dest + lengthD) = *(src + lengthS);
+		*(dest + lenD) = *(src + lenS);
 		lenD++;
 		lenS++;
 	}
 
-	*(dest + lenT) = '\0';
+	*(dest + lenD) = '\0';
 	return (dest);
 }
