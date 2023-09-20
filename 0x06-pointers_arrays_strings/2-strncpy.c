@@ -13,10 +13,9 @@ char *_strncpy(char *dest, char *src, int n);
 
 	lenS = 0;
 
-	while (src[lenS] != '\0' && lenS < n)
+	for (lenS = 0; src[lenS] != '\0' && lenS < n; lenS++)
 	{
-		dest[lenS] = src[lenS]; 
-		lenS++;
+		dest[lenS] = src[lenS];
 	}
 
 	while (lenS < n)
