@@ -9,11 +9,11 @@
  */
 char *_strcpy(char *dest, char *src, int n)
 {
-	int lenS, lenD;
+	int lenS;
 
 	lenS = 0;
 
-	while (*(src + lenS) != '\0' && lenS < n - 1)
+	while (*(src + lenS) != '\0' && lenS < n)
 	{
 		*(dest + lenS) = *(src + lenS); 
 		lenS++;
