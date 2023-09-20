@@ -7,7 +7,7 @@
  *
  * Return: returns the new string
  */
-char *_strcpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n);
 {
 	int lenS;
 
@@ -19,6 +19,9 @@ char *_strcpy(char *dest, char *src, int n)
 		lenS++;
 	}
 
-	dest[lenS] = '\0';
+	while (lenS < n)
+	{
+		dest[lenS++] = '\0';
+	}
 	return (dest);
 }
