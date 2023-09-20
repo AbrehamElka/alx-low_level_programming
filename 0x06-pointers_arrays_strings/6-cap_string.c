@@ -7,7 +7,7 @@
  */
 char *cap_string(char *n)
 {
-	int i, cap;
+	int i, cap, x;
 
 	cap = 32;
 
