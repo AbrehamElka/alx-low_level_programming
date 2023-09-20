@@ -16,12 +16,12 @@ char *_strcat(char *dest, char src *src)
 
 	while (*(dest + lenD) != '\0')
 	{
-		lenD;
+		lenD++;
 	}
 
 	while (*(src + lenS) != '\0')
 	{
-		lenS;
+		lenS++;
 	}
 	
 	
