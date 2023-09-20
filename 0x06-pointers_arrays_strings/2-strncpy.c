@@ -1,28 +1,21 @@
 #include "main.h"
 
 /**
- * _strcpy - copies a string
- * @dest: pointer to first string
- * @src: pointer to string to be copied
- * @n: number of string to cpy
- * Return: returns the new string
+ * _strncpy - a function that copies a string
+ * @dest: pointer to first value
+ * @src: pointer to second value
+ * @n: input number of char
+ * Return: string
  */
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)
 {
-	int lenS;
+	int i;
 
-	for (lenS = 0; src[lenS] != '\0'; lenS++)
-	{
-		if (lenS < n)
-		{
-			dest[lenS] = src[lenS];
-		}
-	}
-
-	while (lenS < n)
-	{
-		dest[lenS++] = '\0';
-	}
+	for (i = 0; src[i] != '\0'; i++)
+		if (i < n)
+			dest[i] = src[i];
+	while (i < n)
+		dest[i++] = '\0';
 
 	return (dest);
 }
