@@ -13,7 +13,7 @@ char *_strcpy(char *dest, char *src, int n)
 
 	lenS = 0;
 
-	while (*(src + lenS) != '\0' && lenS < n)
+	while (*(src + lenS) != '\0' && lenS + 1 <= n)
 	{
 		*(dest + lenS) = *(src + lenS); 
 		lenS++;
