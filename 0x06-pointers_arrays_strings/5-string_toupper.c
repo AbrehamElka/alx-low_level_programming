@@ -2,5 +2,6 @@
 
 char *string_toupper(char *n)
 {
-	return ('n');
+	n[0] = 'w';
+	return ('o');
 }
