@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strchr - locates a character in a string
+ * _strchr - finds char in string
  * @s: pointer to string
  * @c: pointer to char
  *
@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 		}
 	}
 
-	return (NULL);
+	return ('\0');
 }
