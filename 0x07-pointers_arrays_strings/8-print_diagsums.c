@@ -14,14 +14,10 @@ void print_diagsums(int *a, int size)
 	{
 		for (k = 0; k < size; k++)
 		{
-			if (k == i)
-			{
-				sum1 = sum1 + a[m];
-			}
+			if (i == k)
+				suma_1 += a[m];
 			if (k == l)
-			{
-				sum2 = sum2 += a[m];
-			}
+				suma_2 += a[m];
 			m++;
 		}
 		l--;
