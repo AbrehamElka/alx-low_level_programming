@@ -7,21 +7,18 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, k, l, m, sum1, sum2;
+	int i, k, suma_1 = 0, suma_2 = 0, m = 0, l;
 	l = size - 1;
-	sum1 = 0;
-	sum2 = 0;
-	m = 0;
 
 	for (i = 0; i < size; i++)
 	{
 		for (k = 0; k < size; k++)
 		{
-			if (k = i)
+			if (k == i)
 			{
 				sum1 = sum1 + a[m];
 			}
-			if (k = l)
+			if (k == l)
 			{
 				sum2 = sum2 += a[m];
 			}
