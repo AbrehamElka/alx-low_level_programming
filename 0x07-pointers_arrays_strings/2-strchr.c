@@ -1,27 +1,23 @@
-#include "main.h"
+#include "holberton.h"
 /**
  * _strchr - finds char in string
- * @s: pointer to string
- * @c: pointer to char
+ *@s: pointer to first value
+ *@c: second value
  *
- * Retrurn: pointer to c in s
+ * Return: char as a result
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-	
 
-	for (i = 0; s[i] != '\0'; i++)
+	if (*s == '\0')
+		return (s);
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s == c)
 		{
-			return (s + i);
+			return (s);
 		}
-		else
-		{
-			s++;
-		}
+	       s++;
 	}
-
 	return ('\0');
 }
