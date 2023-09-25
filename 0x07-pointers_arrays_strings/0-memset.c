@@ -5,11 +5,13 @@
  * @s: the poiter to string
  * @b: pointer to the char
  * @n: pointer to a number
+ *
+ * Return: char with result of memset
  */
 char *_memset(char *s, char b, unsigned int n);
 {
 
-	int i;
+	unsigned int i;
 
 	for (i = 0; i <= n; i++)
 	{
