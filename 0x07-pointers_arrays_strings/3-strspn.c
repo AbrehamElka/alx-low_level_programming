@@ -8,7 +8,8 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, k;
+	int i, k;
+	unsigned int n;
 	
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -21,10 +22,14 @@ unsigned int _strspn(char *s, char *accept)
 
 			if (accept[k + 1] == '\0')
 			{
-				return (i);
+				n = (unsigned int) i;
+				return (n);
 			}
 
 		}
 	}
-	return (i);
+
+	n = 0;
+
+	return (n);
 }
