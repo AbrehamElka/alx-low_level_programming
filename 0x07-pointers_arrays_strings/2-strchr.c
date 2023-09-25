@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strchr - finds char in string
  *@s: pointer to first value
