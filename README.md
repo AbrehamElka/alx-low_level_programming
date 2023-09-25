@@ -1,1 +1,1 @@
-Introduction to c languge
+1. Introduction to c languge
