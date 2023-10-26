@@ -1,45 +1,44 @@
-#include "main.c"
-
-
+#include "holberton.h"
 
 /**
- * _strlen- Returns Length of String
- * @s: string
+ * palind2 - obtains length of a
+ * @a: string
+ * @l: integer to count length
  *
- * Return: on success 1
+ * Return: On success 1.
  */
-int _strlen(char *s)
+int palind2(char *a, int l)
 {
-	if (*s != '\0')
-	{
-		return (1 + _strlen(s + 1));
-	}
-	return (0);
+	if (*a == 0)
+		return (l - 1);
+	return (palind2(a + 1, l + 1));
 }
-
 /**
- * is_palindrome: check if palindrom.
- * @s: string
+ * palind3 - compares string vs string reverse
+ * @a: string
+ * @l: length
  *
- * Return: on success 1.
+ * Return: On success 1.
+ */
+
+int palind3(char *a, int l)
+{
+	if (*a != *(a + l))
+		return (0);
+	else if (*a == 0)
+		return (1);
+	return (palind3(a + 1, l - 2));
+}
+/**
+ * is_palindrome - checks if a string is a palindrome
+ * @s: string to evaluate
+ *
+ * Return: On success 1.
  */
 int is_palindrome(char *s)
 {
-	int len, left, right;
+	int l;
 
-	len = _strlen(s);
-	left = 0;
-	right = len - 1;
-
-	while (left < right)
-	{
-		if ((s + left)* != (s + right)*)
-		{
-			return (0);
-		}
-		left++;
-		right--;
-	}
-
-	return (1);
+	l = palind2(s, 0);
+	return (palind3(s, l));
 }
