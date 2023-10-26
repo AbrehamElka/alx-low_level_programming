@@ -33,7 +33,7 @@ int is_palindrome(char *s)
 
 	while (left < right)
 	{
-		if (s[left] != s[right])
+		if ((s + left)* != (s + right)*)
 		{
 			return (0);
 		}
