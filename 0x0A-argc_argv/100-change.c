@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		num -= 2;
 		coins++;
 	}
-	if (dev == 1)
+	if (num == 1)
 		coins++;
 	printf("%d\n", coins);
 	return (0);
