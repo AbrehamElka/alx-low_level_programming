@@ -13,10 +13,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr, i;
 	
-	i = sizeof(s2) - n;
-
+	if (s1 == NULL)
+		s1 = "";
 	if (s2 == NULL)
-		i = 0;
+		s2 = "";
+
+	i = sizeof(s2) - n;
 	if (i >= 0)
 	{
 		ptr = malloc(sizeof(s1) + n);
