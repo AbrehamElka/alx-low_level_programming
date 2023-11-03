@@ -7,7 +7,7 @@
  * @old_size: old size
  * @new_size: new size
  *
- * Returns: a pointer on success or NULL on fail
+ * Return: a pointer on success or NULL on fail
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
