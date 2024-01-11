@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-* _puts_recursion - prints string recursively.
-* @s: stores the string to be printed.
-*
-* Return: void.
-*/
+ * _puts_recursion - function like puts();
+ * @s: input
+ * Return: Always 0 (Success)
+ */
+
 void _puts_recursion(char *s)
 {
 	if (*s)
@@ -16,6 +16,4 @@ void _puts_recursion(char *s)
 	{
 		_putchar('\n');
 	}
-
-	_putchar('\n');
 }
