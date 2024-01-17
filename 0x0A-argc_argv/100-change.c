@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+#include "main.h"
 /**
 * count - countes the amount of change we can give for num i.
 * @i: the coin.
@@ -29,7 +28,7 @@ int count(int i, int div, int *num)
 */
 int main(int argc, char *argv[])
 {
-	int num, i, k;
+	int num, i;
 
 	num = 0;
 	if (argc != 2)
