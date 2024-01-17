@@ -10,7 +10,7 @@ unsigned int count_str(char *str)
 {
 	unsigned int i;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str[0] == '\0')
 	{
 		return (0);
 	}
