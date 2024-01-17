@@ -1,20 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* counter - num of chars.
-* @str: string to be counted.
-*
-* Return: num of chars.
-*/
-int counter(char *str)
-{
-	int i;
-
-	for (i = 0; str[i] != '\0'; )
-		i++;
-	return (i);
-}
-/**
 * argstostr - concats all arguments.
 * @ac: num of arguments.
 * @av: the arguments.
@@ -36,6 +22,7 @@ char *argstostr(int ac, char **av)
 		}
 		size++;
 	}
+	size++;
 	str = malloc((sizeof(char) * size));
 	if (str == NULL)
 		return (NULL);
