@@ -31,17 +31,21 @@ int main(int argc, char *argv[])
 	int num, i;
 
 	num = 0;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
 	i = atoi(argv[1]);
+
 	if (i < 0)
 	{
 		printf("0");
 		return (0);
 	}
+
 	i = count(i, 25, &num);
 	i = count(i, 10, &num);
 	i = count(i, 5, &num);
