@@ -23,22 +23,26 @@ int counter(char *str)
 */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, m;
+	int i, j, k, m, size;
 	char *str;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		i = i + counter(av[i]);
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			size++;
+		}
+		size++;
 	}
-	str = malloc(((sizeof(char) * i) + ac) + 1);
+	str = malloc((sizeof(char) * size));
 	if (str == NULL)
 		return (NULL);
 	k = 0;
 	m = 0;
 	j = 0;
-	for ( ; j < (i + ac); )
+	for ( ; j < size; )
 	{
 		if (av[k][m] == '\0')
 		{
