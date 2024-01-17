@@ -10,12 +10,16 @@ unsigned int count_str(char *str)
 {
 	unsigned int i;
 
+	if (str == NULL || str == "")
+	{
+		return (0);
+	}
 	i = 0;
 	for ( ; str[i] != '\0'; )
 	{
 		i++;
 	}
-	return (i);
+	return (i + 1);
 }
 /**
 * str_concat - concatinates two strings on a new array.
@@ -29,13 +33,8 @@ char *str_concat(char *s1, char *s2)
 	char *str;
 	unsigned int i, j, k, m;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	i = count_str(s1) + 1;
-	j = count_str(s2) + 1;
+	i = count_str(s1);
+	j = count_str(s2);
 	k = i + j;
 	str = malloc(sizeof(char) * k);
 	if (str == NULL)
