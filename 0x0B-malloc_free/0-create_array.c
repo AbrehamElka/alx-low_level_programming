@@ -9,7 +9,7 @@
 */
 char *create_array(unsigned int size, char c)
 {
-	if (size == NULL)
+	if (size == 0)
 	{
 		return (NULL);
 	}
@@ -19,9 +19,12 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	for (int i = 0; i < size; i++)
+	unsigned int i = 0;
+
+	for (; i < size;)
 	{
 		str[i] = c;
+		i++;
 	}
 	s[size] = '\0';
 	return (str);
