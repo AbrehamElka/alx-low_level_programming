@@ -1,3 +1,4 @@
+int counter(char *str);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
 unsigned int count_str(char *str);
