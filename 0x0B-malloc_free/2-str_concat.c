@@ -48,11 +48,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (m < i)
 		{
-			s[m] = s1[m];
+			str[m] = s1[m];
 		}
 		else
 		{
-			s[m] = s2[j];
+			str[m] = s2[j];
 			j++;
 		}
 		m++;
