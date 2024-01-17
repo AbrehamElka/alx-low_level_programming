@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 		}
 		else
 		{
-			str[j] = av[k][m]
+			str[j] = av[k][m];
 			m++;
 		}
 		j++;
