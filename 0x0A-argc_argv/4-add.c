@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+/**
+* main - the main function.
+* @argc: the num of arguments.
+* @argv: the arguments.
+* Returns: 0 on success.
+*/
 int main(int argc, char *argv[])
 {
 	int i, sum, j;
