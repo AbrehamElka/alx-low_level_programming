@@ -28,6 +28,6 @@ char *create_array(unsigned int size, char c)
 		str[i] = c;
 		i++;
 	}
-	s[size] = '\0';
+	str[size] = '\0';
 	return (str);
 }
