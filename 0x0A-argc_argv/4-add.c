@@ -1,22 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <ctype.h>
 int main(int argc, char *argv[])
 {
-	long int i, sum;
+	int i, sum, j;
 	char *endptr;
 
 	sum = 0;
 	if (argc <= 1)
+	{
+		printf("0");
 		return (0);
+	}
 	for (i = 0; i < argc; i++)
 	{
-		sum = sum + strtol(argv[i], &endptr, 10);
-		if (endptr != '\0')
+		sum = sum + atoi(argv[i], &endptr, 10);
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!(isdigit(argv[i][j])))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
 	printf("%d", sum);
