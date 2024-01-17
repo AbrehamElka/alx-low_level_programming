@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 /**
 * main - the main function.
 * @argc: num of arguments.
