@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	long int i, sum;
 	char *endptr;
 
 	sum = 0;
@@ -19,5 +19,6 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 	}
+	printf("%d", sum);
 	return (0);
 }
