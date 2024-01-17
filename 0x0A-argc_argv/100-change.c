@@ -1,6 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+/**
+* count - countes the amount of change we can give for num i.
+* @i: the coin.
+* @div: the change.
+* @num: the amount.
+* Return: new i on success.
+*/
+int count(int i, int div, int *num)
+{
+	int k;
+
+	if (i >= div)
+	{
+		k = i - (i % div);
+		(*num) = *num + (k / div);
+		i = (i % div);
+	}
+	return (i);
+}
 /**
 * main - the main function.
 * @argc: the num of arguments.
@@ -12,38 +32,22 @@ int main(int argc, char *argv[])
 	int num, i, k;
 
 	num = 0;
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	i = atoi(argv[1]);
-	if (i >= 25)
+	if (i < 0)
 	{
-		k = i - (i % 25);
-		num = num + (k / 25);
-		i = (i % 25);
+		printf("0");
+		return (0);
 	}
-	if (i >= 10)
-	{
-		k = i - (i % 10);
-		num = num + (k / 10);
-		i = (i % 10);
-	}
-	if (i >= 5)
-	{
-		k = i - (i % 5);
-		num = num + (k / 5);
-		i = (i % 5);
-	}
-	if (i >= 2)
-	{
-		k = i - (i % 2);
-		num = num + (k / 2);
-		i = (i % 2);
-	}
-	if (i >= 1)
-	{
-		k = i - (i % 1);
-		num = num + (k / 1);
-		i = (i % 1);
-	}
-
+	i = count(i, 25, &num);
+	i = count(i, 10, &num);
+	i = count(i, 5, &num);
+	i = count(i, 2, &num);
+	i = count(i, 1, &num);
 	printf("%d\n", num);
 	return (0);
 }
