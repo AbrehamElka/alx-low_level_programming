@@ -6,7 +6,7 @@
 * main - the main function.
 * @argc: the num of arguments.
 * @argv: the arguments.
-* Returns: 0 on success.
+* Return: 0 on success.
 */
 int main(int argc, char *argv[])
 {
