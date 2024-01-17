@@ -19,7 +19,7 @@ unsigned int count_str(char *str)
 	{
 		i++;
 	}
-	return (i + 1);
+	return (i);
 }
 /**
 * str_concat - concatinates two strings on a new array.
@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 	i = count_str(s1);
 	j = count_str(s2);
 	k = i + j;
-	str = malloc(sizeof(char) * k);
+	str = malloc((sizeof(char) * k) + 1);
 	if (str == NULL)
 	{
 		return (NULL);
