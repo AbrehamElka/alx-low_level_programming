@@ -1,6 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
+/**
+* strlen_ - gives the length of string.
+* @str: the string to be measured.
+* Return: len of str.
+*/
+unsigned int strlen_(char *str)
+{
+	unsigned int i;
+
+	for (i = 0; str[i] != '\0'; )
+		i++;
+	return (i);
+}
 /**
 * string_nconcat - concats two strings to n bytes.
 * @s1: the first string.
@@ -18,17 +30,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if ((strlen(s2) - 1) <= n)
-		i = strlen(s2);
+	if ((strlen_(s2) - 1) <= n)
+		i = strlen_(s2);
 	else
 		i = n;
-	i = i + strlen(s1) + 1;
+	i = i + strlen_(s1) + 1;
 	str = malloc(i * sizeof(char));
 
 	if (str == NULL)
 		return (NULL);
 
-	for (k = 0; k < strlen(s1); k++)
+	for (k = 0; k < strlen_(s1); k++)
 		str[k] = s1[k];
 
 	for (m = 0; (m + k) < (i - 1); m++)
