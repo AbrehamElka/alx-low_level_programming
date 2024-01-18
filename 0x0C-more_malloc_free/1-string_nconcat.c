@@ -23,24 +23,26 @@ unsigned int strlen_(char *str)
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, k, m;
+	unsigned int i, k, m, len1, len2;
 	char *str;
 
+	len1 = strlen_(s1);
+	len2 = strlen_(s2);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if ((strlen_(s2) - 1) <= n)
-		i = strlen_(s2);
+	if (len2 <= n)
+		i = len2;
 	else
 		i = n;
-	i = i + strlen_(s1) + 1;
+	i = i + len1 + 1;
 	str = malloc(i * sizeof(char));
 
 	if (str == NULL)
 		return (NULL);
 
-	for (k = 0; k < strlen_(s1); k++)
+	for (k = 0; k < len1; k++)
 		str[k] = s1[k];
 
 	for (m = 0; (m + k) < i; m++)
