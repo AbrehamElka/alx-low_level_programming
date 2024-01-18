@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 /**
 * malloc_checked - allocates memory with size b.
 * @b: size of the memory.
