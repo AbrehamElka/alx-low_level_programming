@@ -1,8 +1,16 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+* _realloc - allocates memory for new size.
+* @ptr: privious pointer.
+* @old_size: size of old pointer.
+* @new_size: size of new pointer.
+*
+* Return: a newly allocated pointer on success.
+*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *castptr, *castnew;
+	char *castnew;
 	void *newptr;
 	unsigned int i;
 
@@ -21,19 +29,19 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			free(ptr);
 			return (NULL);
 		}
+		return (newptr);
 	}
-	castptr = (char *) ptr;
 
 	newptr = malloc(new_size);
-	castnew = (char *) newptr;
 	if (newptr == NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	for(i = 0; i < new_size; i++)
+	castnew = (char *) newptr;
+	for (i = 0; i < old_size && i < new_size; i++)
 	{
-		castnew[i] = castptr[i];
+		castnew[i] = ((char *)ptr)[i];
 	}
 	free(ptr);
 	return (newptr);
