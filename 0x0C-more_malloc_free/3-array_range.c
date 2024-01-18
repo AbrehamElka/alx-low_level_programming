@@ -30,6 +30,8 @@ int *array_range(int min, int max)
 		return (NULL);
 	i = counter(min, max);
 	ptr = malloc(i * sizeof(int));
+	if (ptr == NULL)
+		return (NULL);
 	for (k = 0; k < i; k++)
 	{
 		ptr[k] = min;
