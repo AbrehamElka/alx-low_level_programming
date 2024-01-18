@@ -8,36 +8,7 @@
 */
 void *malloc_checked(unsigned int b)
 {
-	if (b % sizeof(double) == 0)
-	{
-		double *i;
-
-		i = malloc(b);
-		if (i == NULL)
-		{
-			return ((int *) 98);
-		}
-		return (i);
-	}
-	if (b % sizeof(float) == 0)
-	{
-		float *i;
-
-		i = malloc(b);
-		if (i == NULL)
-			return ((int *) 98);
-		return (i);
-	}
-	if (b % sizeof(int) == 0)
-	{
-		int *i;
-
-		i = malloc(b);
-		if (i == NULL)
-			return ((int *) 98);
-		return (i);
-	}
-	char *i;
+	void *i;
 
 	i = malloc(b);
 	if (i == NULL)
