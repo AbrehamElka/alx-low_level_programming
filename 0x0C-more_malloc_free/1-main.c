@@ -11,7 +11,7 @@ int main(void)
 {
     char *concat;
 
-    concat = string_nconcat("Best ", "School !!!", 7);
+    concat = string_nconcat("", "fort", 2);
     printf("%s\n", concat);
     free(concat);
     return (0);
