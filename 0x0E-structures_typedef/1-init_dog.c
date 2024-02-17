@@ -1,3 +1,4 @@
+#include "dog.h"
 /**
 * init_dog - initializes a varable for dog
 * @d: the dog.
