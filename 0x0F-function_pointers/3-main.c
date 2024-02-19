@@ -1,5 +1,12 @@
 #include "3-calc.h"
 #include <stdio.h>
+/**
+* main - gets inputs and do an operation.
+* @argc: number of inputs.
+* @argv: the inputs.
+*
+* Return: 0 on success.
+*/
 int main(int argc, char *argv[])
 {
 	int a, b, result;
