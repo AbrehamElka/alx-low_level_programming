@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* add_dnodedint_end - adding node at the end.
+* add_dnodeint_end - adding node at the end.
 * @head: the head of the node.
 * @n: the data of the new node to be added.
 *
