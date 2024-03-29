@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    int nb;
+    int nb, n;
 
     nb = _atoi("98");
     printf("%d\n", nb);
@@ -25,5 +25,8 @@ int main(void)
     printf("%d\n", nb);
     nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
     printf("%d\n", nb);
+
+    n = _atoi("-2147483648");
+    printf("%d\n", n);
     return (0);
 }
